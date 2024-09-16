@@ -6,7 +6,7 @@ import logging
 dynamodb = boto3.resource('dynamodb')
 table = dynamodb.Table('RegistroArquivosTable')  # Substituir pelo nome da sua tabela DynamoDB
 sns = boto3.client('sns')
-sns_topic_arn = 'arn:aws:sns:us-east-1:my_accout:Lambda_notification'  # Substituir pelo ARN do seu tópico SNS
+sns_topic_arn = 'arn:aws:sns:us-east-1:my_account:Lambda_notification'  # Substituir pelo ARN do seu tópico SNS
 
 # Setup de logging
 logger = logging.getLogger()
@@ -26,11 +26,11 @@ def lambda_handler(event, context):
         # Extraindo o timestamp do evento
         event_time = event['Records'][0]['eventTime']
         
-        # Salvando no DynamoDB
+        # Salvando no DynamoDB usando os nomes corretos das chaves
         table.put_item(
             Item={
-                'objectKey': object_key,  # Partition Key
-                'versionId': version_id,  # Sort Key
+                'object_key': object_key,  # Partition Key (ajustada para object_key)
+                'version_id': version_id,  # Sort Key (ajustada para version_id)
                 'bucketName': bucket_name,
                 'timestamp': event_time
             }
