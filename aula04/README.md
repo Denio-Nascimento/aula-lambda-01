@@ -1,3 +1,8 @@
+![Aula 4](imagem/aula4.png)
+
+
+
+
 # Projeto AWS Lambda para Processar Pedidos e Tratamento de Pedidos Inválidos
 
 ## Descrição do Projeto
