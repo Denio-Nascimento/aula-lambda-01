@@ -1,8 +1,3 @@
-![Aula 4](imagem/aula4.png)
-
-
-
-
 # Projeto AWS Lambda para Processar Pedidos e Tratamento de Pedidos Inválidos
 
 ## Descrição do Projeto
@@ -11,6 +6,10 @@ Este projeto consiste em uma função AWS Lambda que é acionada por notificaç�
 1. Baixa o arquivo JSON do bucket S3.
 2. Processa o conteúdo e insere os pedidos válidos em uma tabela DynamoDB.
 3. Se um pedido for inválido, ele será enviado para uma fila SQS para tratamento posterior.
+
+
+![Aula 4](imagem/aula4.png)
+
 
 ## Recursos Necessários
 
